@@ -1,27 +1,24 @@
-var Promise =  require('bluebird');
-
-
-function step1(){
-	console.log('a');
-	return this;
+var Q = require("q");
+var fun1 = function (data) {
+  var deferred = Q.defer();
+  deferred.resolve(data+" fun1");
+  return deferred.promise;
 }
 
-
-function step2(){
-	console.log('b');
-	return this;
+var fun2 = function (data) {
+  var deferred = Q.defer();
+  deferred.resolve(data+" fun2");
+  return deferred.promise;
 }
 
-
-function step3(){
-	console.log('c');
-	return this;
+var fun3 = function (data) {
+  var deferred = Q.defer();
+  deferred.resolve(data+" fun3");
+  return deferred.promise;
 }
 
-function step4(){
-	console.log('d');
-	return this;
-}
-
-
-Promise.then(step1).then(step2).then(step3).then(step4);
+Q.all([
+  fun2("test1"),fun3("test2"),fun4("test3")
+  ]).spread(function(){
+    console.log(arguments);//获得的参数为('test1 fun1', 'test2 fun2', 'test3 fun3' )
+  });

@@ -1,0 +1,9 @@
+{
+    "name": "node-echo",
+    "main": "./lib/echo.js",
+    "dependencies": {
+        "argv": "0.0.2",
+        "bluebird":"3.4.6",
+        "cheerio":"0.22.0"
+    }
+}
