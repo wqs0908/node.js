@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" type="text/css" href="../public/stylesheets/bootstrap-select.min.css">
+
+  </head>
+  <body>
+    <!-- 代码片断 -->
+		<form class="form-horizontal well" method="GET">
+		<select name="type" class="selectpicker show-tick" data-size="5" value="">
+		<option></option>
+		<option>科幻</option>
+		<option>剧情</option>
+		<option>犯罪</option>
+		<option>西部</option>
+		<option>爱情</option>
+		</select>
+		</form>
+
+		<!-- 代码片段 -->
+		<script type="text/javascript">
+		$(function(){
+
+		//下拉菜单
+		$('.selectpicker').selectpicker({noneSelectedText:'请选择'});
+		$('.selectpicker').selectpicker('val',$('.selectpicker').attr('value'));
+
+		})
+		</script>
+
+
+    <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../public/javascripts/bootstrap-select.min.js"></script>
+  </body>
+</html>
