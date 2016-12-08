@@ -21,10 +21,10 @@
 ##E-jiazheng
 一个用Node.js实现的小项目，实现用户和商家的登录操作以及用户和商家之间的通信
 具体细节如下:
-1.使用的模块包括express、morgan（日志管理）、cookie-parser（解析cookie）、body-parser（解析请求体）
-2.商家、个人用户统一登录界面，通过选择商家、个人来实现不同用户类型的登录
-3.使用users.json文件保存登录用户的信息；
-4.
+* 使用的模块包括express、morgan（日志管理）、cookie-parser（解析cookie）、body-parser（解析请求体）
+* 商家、个人用户统一登录界面，通过选择商家、个人来实现不同用户类型的登录
+* 使用users.json文件保存登录用户的信息；
+
 
 
 
